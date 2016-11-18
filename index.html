@@ -1,0 +1,281 @@
+<!doctype html>
+<html ng-app="partiApp" ng-controller="mainCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <!--<link rel="stylesheet" href="css/main.css"> -->
+        
+
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-86601518-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+
+    </head>
+    <body>
+        
+       <div class="container fondo">
+           
+           <div class="row">
+               
+               <div class="col-xs-12">
+                   
+                    <div class="logo">
+                        <img src="img/logo_electrolight.png" class="img-responsive">
+                    </div>
+
+                    <div class="content1">
+                        
+                        <div class="botellasGrandes">
+                            <img src="img/botellas_grandes.png" class="img-responsive"> 
+                        </div>
+
+                        <div class="contentIdVoucher">
+                                <div class="inputVoucher">
+                                    <h4>Ingrese número ID del voucher</h4>
+                                    <form name="formVoucher">
+                                        <input type="text" id="voucher" name="num_id_voucher" ng-model="modelo.num_id_voucher" maxlength="8" minlength="8" required>
+                                    </form>
+                                </div>
+                                <p>VIGENCIA: 01 de Noviembre al 31 de Diciembre</p>
+                                 <!-- Button trigger modal -->
+                                <p>
+                                    <button type="button" id="btnModal" ng-disabled="formVoucher.$invalid" class="btn btn-primary btnMain" data-toggle="modal" data-target="#myModal">Enviar</button>
+                                </p>
+                            
+                        </div>
+
+                        <div class="voucherMovil">
+                                <div class="inputVoucher">
+                                    <h4>Ingrese número ID del voucher</h4>
+                                    <input type="text" id="voucher" name="num_id_voucher" ng-model="modelo.num_id_voucher" maxlength="8">
+                                </div>
+                                <p>VIGENCIA: 01 de Noviembre al 31 de Diciembre</p>
+                                 <!-- Button trigger modal -->
+                                <p>
+                                    <button type="button" id="btnModal" class="btn btn-primary btnMain" data-toggle="modal" data-target="#myModal">Enviar</button>
+                                </p>
+                            
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="voucherMovil2">
+                            <div class="fondoBotellas"><img src="img/titulo_mobile.png"></div>
+                                <div class="inputVoucher">
+                                    <h4>Ingrese número ID del voucher</h4>
+                                    <form name="formVoucher">
+                                        <input type="text" id="voucher" name="num_id_voucher" ng-model="modelo.num_id_voucher" maxlength="8" minlength="8" required>
+                                    </form>
+                                </div>
+                                <p>VIGENCIA: 01 de Noviembre al 31 de Diciembre</p>
+                                 <!-- Button trigger modal -->
+                                <p>
+                                    <button type="button" id="btnModal" ng-disabled="formVoucher.$invalid" class="btn btn-primary btnMain" data-toggle="modal" data-target="#myModal">Enviar</button>
+                                </p>
+                            
+                        </div>
+
+
+                    <div class="porComprar">
+                            <!--<span class="btnFace"><button type="button">Siguenos en <i class="fa fa-facebook" aria-hidden="true"></i></button></span>
+                            <br>-->
+                            <!--<img src="img/por_comprar.png">-->
+                            <p class="pcTxt1">
+                                <span class="txt1"><strong>por comprar</strong> <br> 3x2 en six packs</span>
+                                <br>
+                                <br>
+                            <img src="img/botellas_chicas.png" class="botellas_chicas img-responsive">
+                            </p>
+                            <p style="margin-top: 15px;;text-align: center;    margin-bottom: 21px;">
+                                <span class="txt1">participa del <br> <strong>sorteo de :</strong></span>
+                            </p>
+                            <div class="contentVales">
+                                <div class="vales">
+                                        <ul>
+                                        <li>2 Vales de consumo - S/.500</li>
+                                        <li>2 Vales de consumo - S/.1000</li>
+                                        <li>2 Vales de consumo - S/.1500</li>
+                                        <div class="emImg"><strong>EN</strong> <img src="img/logo_marathon.png"></div class="emImg">
+                                    </ul>
+                                </div>
+                                <span>*Un premio por ganador</span>
+                            </div>
+                            <div class="fechas">
+                            
+
+                                <table class="tg">
+                                  <tbody><tr>
+                                    <th class="tg-s6z2"><img src="img/fechas_sorteo.png" style="width: 150px;"></th>
+                                    <th class="tg-yw4l"><img style="width: 87px;" src="img/flecha.png"></th>
+                                    <th class="tg-yw4l"><div style="width: 182px;color: white;font-size: 18px;">
+                                        <span>1°SORTEO: 15.12.16</span> <br>
+                                        <span>2°SORTEO: 16.01.17</span>
+                                    </div></th>
+                                  </tr>
+                                </tbody></table>
+                            </div>
+
+                             <div style="    margin-top: 39px;" class="fechas2">
+                            
+
+                               <img src="img/fechas_mobile.png">
+                            </div>
+                        </div>
+
+               </div>   
+
+           </div>
+  
+       </div>
+
+<div class="terminos-content">
+    <footer>
+    <div class="terminos"><p><a href="terminos.html">Términos y condiciones</a></p></div>
+    <div class="rd"><p>RD 4228-2016-ONAGI-DGAE-DA-PC</p></div>
+    </footer> 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">COMPLETA TUS DATOS</h4>
+      </div>
+      <div class="modal-body">
+        <form id="formParticipante" name="formParti" ng-submit="save(modelo)">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">NOMBRES Y APELLIDOS :</label>
+            <input type="text" 
+                    class="form-control" 
+                    id="recipient-name" 
+                    name="nombre_apellido" 
+                    ng-model="modelo.nombre_apellido"
+                    ng-class="{error: formParti.nombre_apellido.$error.required && !formParti.$pristine, success: !formParti.$pristine}"
+                    required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">TELEFONO :</label>
+            <input type="number" 
+                    class="form-control" 
+                    id="recipient-name" 
+                    name="telefono" 
+                    ng-model="modelo.telefono"
+                    ng-class="{error: formParti.telefono.$error.required && !formParti.$pristine || formParti.telefono.$error.number || formParti.telefono.$error.min || formParti.telefono.$error.max, success: !formParti.$pristine}"
+                    max="{{maxNumberTel}}"
+                    min="{{minNumberTel}}" 
+                    required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">D.N.I :</label>
+            <input type="number" 
+                    class="form-control" 
+                    id="recipient-name"     
+                    name="dni" 
+                    ng-model="modelo.dni"
+                    max="{{maxNumber}}"
+                    min="{{minNumber}}"
+                    ng-class="{error: formParti.dni.$error.required && !formParti.$pristine || formParti.dni.$error.min || formParti.dni.$error.max || formParti.dni.$error.number, success: !formParti.$pristine}"
+
+                    required>
+
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">E-MAIL :</label>
+            <input type="email" 
+                    class="form-control" 
+                    id="recipient-name" 
+                    name="email" 
+                    ng-class="{error: formParti.email.$error.required && !formParti.$pristine || formParti.email.$error.email, success: !formParti.$pristine}"
+                    ng-model="modelo.email"
+                    required>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">DIRECCIÓN :   </label>
+            <input type="text" 
+                    class="form-control" 
+                    id="recipient-name" 
+                    name="direccion" 
+                    ng-class="{error: formParti.direccion.$error.required && !formParti.$pristine, success: !formParti.$pristine}"
+                    ng-model="modelo.direccion"
+                    required>
+          </div>
+
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">CIUDAD :   </label>
+            <input type="text" 
+                    class="form-control" 
+                    id="recipient-name" 
+                    name="ciudad" 
+                    ng-class="{error: formParti.ciudad.$error.required && !formParti.$pristine, success: !formParti.$pristine}"
+                    ng-model="modelo.ciudad"
+                    required>
+          </div>
+
+          <div class="modal-footer">
+        <button type="submit" ng-disabled="formParti.$invalid" class="btn btn-primary btnMain">Enviar</button>
+      </div>
+        </form>
+        <div id="preload">
+            <i class="fa fa-refresh fa-spin fa-5x fa-fw"></i>
+            <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+        
+
+        <script>
+
+            var app = angular.module('partiApp',[]);
+
+            app.controller('mainCtrl', ['$scope', '$http','$timeout', function($scope,$http,$timeout){
+                $scope.maxNumber = "99999999";
+                $scope.minNumber = "1000000";
+
+                $scope.minNumberTel = "100000";
+                $scope.maxNumberTel = "999999999";
+
+                $scope.save = function(modelo){
+                    $("#formParticipante").hide();
+                    $("#preload").css('display', 'block');
+                    $http.post('http://www.ganaconelectrolight.com/admin/api/public/participantes', modelo)
+                        .success(function(data){
+                            $timeout(function() {
+                                $("#myModal").modal('hide');
+                                window.location = "thank.html";
+                            }, 4500);
+                        });
+                    $scope.modelo = {};
+                }
+            }])
+        </script>
+
+
+    </body>
+</html>

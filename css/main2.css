@@ -1,0 +1,243 @@
+input[type=number]::-webkit-outer-spin-button,
+          input[type=number]::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+          }
+
+          input[type=number] {
+              -moz-appearance:textfield;
+          }
+
+            @font-face {
+                font-family: no-more;
+                font-style: normal;
+                font-weight: normal;
+                src:url(../fonts/No-more-lies.ttf);
+            }
+            body{
+                background: #214287;
+            }
+
+            /* .botellasGrandes img.bgm1{display: none;} */
+             /* .container{
+                background: url(../img/fondo.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                         }  */
+
+             .contenedor{
+                background: url(../img/fondo.jpg) no-repeat;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                width: 1440px;
+                margin: 0 auto;
+                         }
+
+
+            .content1{width: 615px;}
+
+           
+            .contentVoucher{
+                display: block;
+                position: absolute;
+                z-index: 100;
+                width: 47%;
+                left: 8%;
+                /* top: 2%; */
+                margin-top: -31px;
+            }
+            /* .botellasGrandes{
+                position: relative;
+                top: -70px;
+            } */
+            .botellasGrandes img{
+                width: 100%;
+            }
+
+            .logo{
+                display: block;
+                
+                width: 95px;
+                height: 85px;
+                    /* margin: 27px; */
+            }
+            .logo img{
+                width: 100%;
+            }
+            .inputVoucher{
+                        position: relative;
+    top: 68%;
+    background: rgb(255, 131, 16);
+    padding: 10px;
+    border-radius: 14px;
+    text-align: center;
+            }
+
+            .contentIdVoucher p{
+                color: white;
+        
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;
+            }
+            .error{
+                border: 1px solid red;
+            }
+
+            #recipient-name-error{display: none!important;}
+
+            .contentIdVoucher{
+                position: relative;
+                top: -316px;
+                margin: 0 auto;
+                left: 79px;
+                /* background: rgb(255, 131, 16); */
+                /* padding: 15px; */
+                border-radius: 14px;
+                width: 304px;
+                /* left: 24%; */
+            }
+            .inputVoucher input{
+                border-radius: 16px;
+                border: 0;
+                padding: 4px;
+            }
+            .inputVoucher h4{
+                margin-top: 0px;
+                color: white;
+                font-family: no-more;
+
+            }
+            .contentIdVoucher button{
+                font-style: normal;
+                font-style: bold;
+            }
+            .modal-header{
+                text-align: center;
+                color: #ff6a0c;
+            }
+            .modal-body{
+                background: #fb721c;
+                color: white;
+            }
+            .modal-footer{
+                text-align: center;
+            }
+            .porComprar{    width: 347px;
+    /* float: right; */
+    position: absolute;
+    margin-right: -3%;
+    top: 41px;
+    right: 0;
+            }
+            .porComprar .txt1{font-size: 24px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;}
+            .porComprar strong{font-family: no-more;
+    font-size: 40px;}
+            .porComprar .btnFace {float: right;margin-right: 15px;}
+            .porComprar .btnFace button{background: #0145d6;
+    border: 0;
+    border-radius: 15px;
+    color: white;
+    font-weight: normal;
+    padding: 4px;
+    width: 100px;
+    font-size: 13px;}
+    .contentVales{
+         width: 260px;
+         margin: 0 auto;
+    }
+    .botellas_chicas{width: 70%;margin: 0 auto;}
+    .vales{
+    background: orange;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    padding-bottom: 1px;
+    }
+    .vales ul{
+                padding: 0 0 0 27px;
+    }
+    .vales .emImg{text-align: center;}
+    .vales .emImg img{width: 50%; vertical-align: sub;}
+    .vales .emImg strong{font-size: 23px;}
+    .contentVales span{color: white;margin-left: 15px;}
+    footer{
+        width: 100%;
+    height: 34px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #214287;
+    background: #214287;
+    }
+
+    footer p{margin-top: 3px;}
+    footer p a{padding-left: 10%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;}
+
+    footer p a:hover{color: white;text-decoration: none;}
+
+    .fechas{
+        position: relative;
+        left: -35%;
+    }
+
+    @media(max-width: 1024px){
+        .content1{width: 535px;}
+        .porComprar{top: 17px;}
+        .porComprar strong{font-size: 32px;}
+        .botellas_chicas{width: 55%;}
+        .porComprar .txt1{    font-size: 19px;}
+    }
+    @media(max-width: 1440){
+        .porComprar{margin-right: -9%;}
+        .botellas_chicas{width: 78%;}
+    }
+
+@media(max-width: 768px){
+    body{
+            background: url(../img/bgmobil1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+}
+
+.content1{
+    width: 700px;
+    position: relative;
+    left: 99px;
+}
+
+.content1{
+        width: 770px;
+    position: relative;
+    left: 47px;
+}
+
+.contentIdVoucher {
+    position: absolute;
+    top: 55%;
+    /* margin: 0 auto; */
+    left: 37%;
+    /* background: rgb(255, 131, 16); */
+    padding: 24px;
+    border-radius: 14px;
+    width: 450px;
+    /* left: 24%; */
+}

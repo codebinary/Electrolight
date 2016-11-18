@@ -1,0 +1,107 @@
+<ol class="breadcrumb animated fadeIn fast">
+	<li><a href="#/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+	<li class="active">Participantes</li>
+</ol> 
+
+
+<div class="row">
+	    	
+	    
+
+	<div class="col-md-12 col-xs-12">
+	  <div class="box">
+	    
+	    <div class="box-header with-border">
+	      <h3 class="box-title">Participantes</h3>
+	
+			<div class="box-tools">
+				<div class="input-group">	
+				    <a ng-click="exportToExcel('#tblParticipantes')" class="btn btn-primary">
+				        <i class="fa fa-file-excel-o" aria-hidden="true"></i>Exportar
+				    </a>
+				</div>
+				            
+			</div>
+
+	    </div>
+	    <!-- /.box-header -->
+
+
+	    
+	    <div class="box-body">
+	      
+	      <table id="tblParticipantes"  class="table table-bordered table-striped table-responsive">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Nombres y Apellidos</th>
+					<th>Teléfono</th>
+					<th>DNI</th>
+					<th>Email</th>
+					<th>Direccion</th>
+					<th>Ciudad</th>
+					<th>Nº ID VOUCHER</th>
+					<th>Fec. Registro</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr ng-repeat="participante in participantes.data">
+					<td>{{ $index +1 }}</td>
+					<td>{{ participante.nombre_apellido }}</td>
+					<td>{{ participante.telefono }}</td>
+					<td>{{ participante.dni }}</td>
+					<td>{{ participante.email }}</td>
+					<td>{{ participante.direccion }}</td>
+					<td>{{ participante.ciudad }}</td>
+					<td>{{ participante.num_id_voucher }}</td>
+					<td>{{ participante.fechaRegister | quitarHora}}</td>
+					<td>
+						<a ng-click="mostrarModal( participante )" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+						<a ng-click="eliminarParticipante(participante)" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+					</td>
+
+				</tr>
+				<tr>
+					<td align="center" colspan="8" ng-hide="participantes.data">
+						<i class="fa fa-refresh fa-spin fa-5x fa-fw"></i>
+						<span class="sr-only">Loading...</span>
+					</td>
+				</tr>
+			</tbody>
+	      </table>
+
+	      
+
+	
+		</div>
+
+		<div class="box-footer clearfix">
+          <ul class="pagination pagination-sm no-margin pull-right">
+            <li><a ng-click="moverA(1)">«</a></li>
+
+			<li ng-repeat="pag in participantes.pages"
+				ng-class="{
+					'active': participantes.pagActual === pag
+				}">
+				<a  ng-click="moverA(pag)">{{ pag }}</a>
+			</li>
+
+            <!-- <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li> -->
+ 
+
+            <li><a ng-click="moverA( participantes.totalPag )" >»</a></li>
+          </ul>
+        </div>
+
+
+
+		</div>
+	</div>
+
+
+</div>
+
+<div ng-include="'template/modal_promocion.html'"></div>
